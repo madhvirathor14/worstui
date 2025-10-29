@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>90s Revival Store - jyada mt khana - Worst UI</title>
+    <style>
+      /* Terrible 90s Styles: Neon overload, Comic Sans, clashing colors */
+      body {
+        background: linear-gradient(
+          45deg,
+          #ff00ff,
+          #00ff00
+        ); /* Neon pink-green stripes */
+        font-family: "Comic Sans MS", cursive; /* Comic Sans everywhere */
+        color: #ffff00; /* Bright yellow text */
+        margin: 0;
+        padding: 0;
+        animation: blink 1s infinite; /* Blinking background */
+      }
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      header {
+        text-align: center;
+        font-size: 72px; /* Huge text */
+        background: #ff0000; /* Red background */
+        padding: 20px;
+        border: 10px solid #00ffff; /* Cyan border */
+        animation: spin 2s linear infinite; /* Spinning header */
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      nav {
+        background: #000000; /* Black nav */
+        padding: 10px;
+        font-size: 24px;
+      }
+      nav a {
+        color: #ffffff; /* White links */
+        margin: 0 20px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .search {
+        text-align: center;
+        margin: 20px;
+      }
+      .products {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around; /* Messy grid */
+        margin: 20px;
+      }
+      .product {
+        background: #ffff00; /* Yellow boxes */
+        border: 5px solid #ff00ff; /* Pink borders */
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        text-align: center;
+        font-size: 18px;
+        color: #000000; /* Black text on yellow */
+      }
+      .price {
+        font-size: 36px;
+        color: #ff0000; /* Red price */
+        animation: blink 0.5s infinite; /* Blinking price */
+      }
+      button {
+        background: #00ff00; /* Green buttons */
+        color: #000000;
+        border: none;
+        padding: 5px;
+        font-family: "Comic Sans MS", cursive;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #ff0000; /* Changes to red on hover */
+      }
+      footer {
+        text-align: center;
+        font-size: 12px; /* Tiny footer */
+        background: #000000;
+        color: #ffffff;
+        padding: 10px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+      .surprise {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #ff00ff;
+        color: #ffff00;
+        padding: 20px;
+        font-size: 48px;
+        animation: colorChange 1s infinite;
+      }
+      @keyframes colorChange {
+        0% {
+          background: #ff00ff;
+        }
+        25% {
+          background: #00ff00;
+        }
+        50% {
+          background: #ffff00;
+        }
+        75% {
+          background: #00ffff;
+        }
+        100% {
+          background: #ff00ff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Terrible Header with Spinning Animation -->
+    <header>WELCOME TO 90S REVIVAL FOOD STORE!!! EAT LIKE IT'S 1995!</header>
+
+    <!-- Confusing Navigation (Dropdowns don't close properly in this simple version) -->
+    <nav>
+      <a href="#home">Home</a> | <a href="#products">Products ▼</a> (Floppy
+      Disks, Pagers, Tamagotchis, Pizza, Maggi, Pasta, Sandwiches – Dropdown
+      stays open!) | <a href="#cart">Cart</a> |
+      <a href="#about">About Us</a>
+    </nav>
+
+    <!-- Search Bar (Functional but tiny button) -->
+    <div class="search">
+      Search:
+      <input type="text" id="search" placeholder="Type 'pizza' or 'maggi'" />
+      <button onclick="alert('Searching... Found burnt pizza!')">Go</button>
+    </div>
+
+    <!-- Messy Product Grid with Funny Food Items and Real Photos -->
+    <div class="products" id="products">
+      <div class="product">
+        <img
+          src="https://via.placeholder.com/150?text=Floppy+Disk"
+          alt="Floppy Disk"
+          style="width: 100%; filter: blur(2px)"
+        />
+        <!-- Pixelated image -->
+        Floppy Disk 💾<br />
+        <span class="price">$10.99</span><br />
+        <button onclick="buyItem('Floppy Disk')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://via.placeholder.com/150?text=Pager"
+          alt="Pager"
+          style="width: 100%; filter: sepia(100%)"
+        />
+        <!-- Ugly filter -->
+        Pager 📟<br />
+        <span class="price">$5.00</span><br />
+        <button onclick="buyItem('Pager')">Buy Now</button>
+      </div>
+      <!-- Funny Food Products with Real Photos -->
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=150&h=150&fit=crop"
+          alt="Pizza"
+          style="width: 100%; filter: hue-rotate(180deg)"
+        />
+        <!-- Weird filter -->
+        Burnt Pizza 🍕 (With extra cheese... or is it glue?)<br />
+        <span class="price">$12.99</span><br />
+        <button onclick="buyItem('Burnt Pizza')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?w=150&h=150&fit=crop"
+          alt="Maggi"
+          style="width: 100%; filter: invert(100%)"
+        />
+        <!-- Inverted colors -->
+        Maggi Noodles 🥡 (2-Minute Disaster – Takes 20!)<br />
+        <span class="price">$2.50</span><br />
+        <button onclick="buyItem('Maggi Noodles')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1551892376-7c0e4e59e0e6?w=150&h=150&fit=crop"
+          alt="Pasta"
+          style="width: 100%; filter: saturate(500%)"
+        />
+        <!-- Over-saturated -->
+        Soggy Pasta 🍝 (Pasta or Worm Farm?)<br />
+        <span class="price">$8.99</span><br />
+        <button onclick="buyItem('Soggy Pasta')">Buy Now</button>
+      </div>
+      <div class="product">
+        <img
+          src="https://images.unsplash.com/photo-1481070555726-e2fe8357725c?w=150&h=150&fit=crop"
+          alt="Sandwich"
+          style="width: 100%; filter: grayscale(100%)"
+        />
+        <!-- Black and white -->
+        Mystery Sandwich 🥪 (What's inside? Your guess!)<br />
+        <span class="price">$6.99</span><br />
+        <button onclick="buyItem('Mystery Sandwich')">Buy Now</button>
+      </div>
+      <!-- Overlapping elements for chaos -->
+      <div class="product" style="position: absolute; top: 300px; left: 100px">
+        Tamagotchi 🐣<br />
+        <span class="price">$15.00</span><br />
+        <button onclick="buyItem('Tamagotchi')">Buy Now</button>
+      </div>
+    </div>
+
+    <!-- Random Surprise Button (Does nothing but changes color) -->
+    <div class="surprise" id="surprise">SURPRISE! FREE BURNT PIZZA?</div>
+
+    <!-- Tiny Footer -->
+    <footer>
+      © 1995 90s Revival.
+      <a href="#" onclick="alert('Guestbook: Share your burnt food stories!')"
+        >Guestbook</a
+      >
+      |
+      <a href="#" onclick="alert('Contact Form: Complain about the food')"
+        >Contact Us</a
+      >
+    </footer>
+
+    <script>
+      // JavaScript for "working" interactions (popups and alerts)
+      function buyItem(item) {
+        alert(
+          `Item '${item}' added to cart! But wait, it turned into pizza? Proceed to checkout?`
+        );
+        // Simulate navigation to cart (in a real prototype, this would link to another page)
+        window.location.hash = "#cart";
+      }
+
+      // Hide surprise button randomly (but it reappears)
+      setInterval(() => {
+        document.getElementById("surprise").style.display =
+          Math.random() > 0.5 ? "block" : "none";
+      }, 2000);
+    </script>
+  </body>
+</html>
